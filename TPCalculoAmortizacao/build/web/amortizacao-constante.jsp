@@ -25,24 +25,29 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="StylePage.css">
         <title>Calculo de amortizacao constante</title>
     </head>
     <body>
+        <!-- Titulo -->
+        <div class="titulo"> 
         <h4><a href="home.jsp">Voltar</a></h4>
         <h1>Java Server Pages</h1>
         <h2>Amortizacao Constante</h2>
+        </div>
         <form>
-            Valor do emprestimo:
-            <input type="number" name="valorEmprestimo"/>
-            Taxa de juros ao ano:
-            <input type="number" name="taxa"/>
-            Numero de parcelas:
-            <input type="number" name="nparcelas"/>
-            <input type="submit" name="Gerar"/>
+            
+            <input type="number" class="texto" placeholder="Valor do emprestimo:" name="valorEmprestimo"/>
+            
+            <input type="number" class="texto" placeholder="Taxa de juros ao ano:" name="taxa"/>
+            
+            <input type="number" class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
+            <input type="submit" class="Submit" name="Gerar"/>
         </form>
         <Br/>
-        
-        <table border="1">
+        <div class="table-div">
+        <table class="table">
             <tr>
                 <th>Mes</th>
                 <th>Saldo devedor</th>
@@ -91,5 +96,6 @@
             </tr>
             <% } %>
         </table>
+        </div>
     </body>
 </html>
