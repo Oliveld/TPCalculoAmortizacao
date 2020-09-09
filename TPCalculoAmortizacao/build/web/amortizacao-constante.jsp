@@ -4,20 +4,21 @@
     Author     : Daniel
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    Double valorEmprestimo;
-    int nparcelas, taxa;
+    Double valorEmprestimo, taxa;
+    int nparcelas;
     Exception requestException = null;
     try{
         nparcelas = Integer.parseInt(request.getParameter("nparcelas"));
-        taxa = Integer.parseInt(request.getParameter("taxa"));
+        taxa = Double.parseDouble(request.getParameter("taxa"));
         valorEmprestimo = Double.parseDouble(request.getParameter("valorEmprestimo"));
     }
     catch(Exception ex){
         nparcelas = 0;
-        taxa = 0;
+        taxa = 0.0;
         valorEmprestimo = 0.0;
         requestException = ex;
     }
@@ -74,23 +75,25 @@
          
             
             <% Double saldo = valorEmprestimo; 
-             taxa = (taxa/12); 
+             taxa = (taxa/12);
              Double a = (valorEmprestimo/nparcelas); 
-             Double j = (valorEmprestimo*taxa)/100; %>
+             Double j = (valorEmprestimo*taxa)/100; 
+            DecimalFormat df = new DecimalFormat("#0.00");
+            df.format(taxa); %>
             
             <% for (int i = 1; i <=nparcelas; i++) {%>
             <tr>
                 <td><%= i%></td>
                 <% if (i == 1) {%>
                 <td><%= valorEmprestimo%></td>
-                <td><%= j%></td>
+                <td><%= df.format(j)%></td>
                 <% } else {%>
                 <% j = (saldo*taxa)/100; %>
-                <td><%= saldo%></td>
-                <td><%= j%></td>
+                <td><%= df.format(saldo)%></td>
+                <td><%= df.format(j)%></td>
                 <% } %>
-                <td><%= a%></td>
-                <th><%= a+j%></th>
+                <td><%= df.format(a)%></td>
+                <th><%= df.format(a+j)%></th>
                 <% saldo = saldo-a; %>
 
             </tr>
