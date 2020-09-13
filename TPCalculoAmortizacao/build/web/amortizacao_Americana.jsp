@@ -12,7 +12,6 @@
         double emprestimo = 0;
         double juros = 0;
         
-        boolean noArguments = false;
 
     try{
         parcelas = Integer.parseInt(request.getParameter("parcelas"));
@@ -20,7 +19,7 @@
         emprestimo = Double.parseDouble(request.getParameter("emprestimo"));
     }
     catch(Exception ex){
-       noArguments = true;
+       
     }
     
 %>
@@ -30,15 +29,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-    
-            <form>
-            <input type="number" name="emprestimo" placeholder="Emprestimo" />
-            <input type="number" name="parcelas" placeholder="Parcelas" />
-            <input Type="number" name="juros" placeholder="Juros" />
-            <input Type="submit" />
-            </form>
-    
-    
+        
+         <form>
+            
+            <input type="number" class="texto" placeholder="Valor do emprestimo:" name="emprestimo"/>
+            
+            <input type="number" class="texto" placeholder="Taxa de juros ao ano:" name="juros"/>
+            
+            <input type="number" class="texto" placeholder="Numero de parcelas:" name="parcelas"/>
+            <input type="submit" class="Submit" name="Gerar"/>
+        </form>
           <table border="1">
 
             <tr>
@@ -68,15 +68,10 @@
                 
                 //soma o total de juros pago
                 totalJuros += jurosPrestacao; 
-
-                 mes = i;
-
+                mes = i;
                  saldoDevedor = emprestimo;
-
                  _juros = jurosPrestacao;
-
                  prestacao = jurosPrestacao;
-
                  amortizacao = 0;
 
 

@@ -12,7 +12,6 @@
         double emprestimo = 0;
         double juros = 0;
         
-        boolean noArguments = false;
 
     try{
         parcelas = Integer.parseInt(request.getParameter("parcelas"));
@@ -20,7 +19,7 @@
         emprestimo = Double.parseDouble(request.getParameter("emprestimo"));
     }
     catch(Exception ex){
-       noArguments = true;
+       
     }
     
 %>
@@ -31,7 +30,15 @@
     </head>
     <body>
         
-
+         <form>
+            
+            <input type="number" class="texto" placeholder="Valor do emprestimo:" name="emprestimo"/>
+            
+            <input type="number" class="texto" placeholder="Taxa de juros ao ano:" name="juros"/>
+            
+            <input type="number" class="texto" placeholder="Numero de parcelas:" name="parcelas"/>
+            <input type="submit" class="Submit" name="Gerar"/>
+        </form>
           <table border="1">
 
             <tr>
