@@ -33,7 +33,10 @@
     <body>
         <!-- Titulo -->
         <div class="titulo"> 
-        <h4><a href="home.jsp">Voltar</a></h4>
+
+
+        <h4><a href="index.jsp">Voltar</a></h4>
+
         <h1>Java Server Pages</h1>
         <h2>Amortizacao Constante</h2>
         </div>
@@ -88,7 +91,6 @@
                 
                 <td><%= valorEmprestimo%></td>
                 <td><%= df.format(j)%></td>
-                
                 <% } else {%>
                 
                 <% j = (saldo*taxa)/100; %>
@@ -99,6 +101,7 @@
                 <td><%= df.format(a)%></td>
                 <th><%= df.format(a+j)%></th>
                 <% saldo -= a; %>
+
 
             </tr>
             <% } %>
