@@ -117,7 +117,7 @@
             <th> <% out.print(totalAmortizacao); %> </td>
             <th> <% out.print(totalParcelas); %> </td>
             </tr>
-        <table>
+        </table>
     </body>
 </html>
 
