@@ -6,14 +6,39 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<% 
+    
+        int parcelas = 0;
+        double emprestimo = 0;
+        double juros = 0;
+        
+        boolean noArguments = false;
+
+    try{
+        parcelas = Integer.parseInt(request.getParameter("parcelas"));
+        juros = Double.parseDouble(request.getParameter("juros"));
+        emprestimo = Double.parseDouble(request.getParameter("emprestimo"));
+    }
+    catch(Exception ex){
+       noArguments = true;
+    }
+    
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-
+    
+            <form>
+            <input type="number" name="emprestimo" placeholder="Emprestimo" />
+            <input type="number" name="parcelas" placeholder="Parcelas" />
+            <input Type="number" name="juros" placeholder="Juros" />
+            <input Type="submit" />
+            </form>
+    
+    
           <table border="1">
 
             <tr>
@@ -27,9 +52,7 @@
 
         
         <%
-            int parcelas = 10;
-            double emprestimo = 50000;
-            double juros = 3;
+            
             double totalJuros = 0;
 
                 int mes = 0;
@@ -45,10 +68,15 @@
                 
                 //soma o total de juros pago
                 totalJuros += jurosPrestacao; 
-                mes = i;
+
+                 mes = i;
+
                  saldoDevedor = emprestimo;
+
                  _juros = jurosPrestacao;
+
                  prestacao = jurosPrestacao;
+
                  amortizacao = 0;
 
 

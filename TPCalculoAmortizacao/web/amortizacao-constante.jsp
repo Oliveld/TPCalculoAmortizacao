@@ -81,20 +81,24 @@
             DecimalFormat df = new DecimalFormat("#0.00");
             df.format(taxa); %>
             
-            <% for (int i = 1; i <=nparcelas; i++) {%>
+            <% for (int i = 1; i <= nparcelas; i++) {%>
             <tr>
                 <td><%= i%></td>
                 <% if (i == 1) {%>
+                
                 <td><%= valorEmprestimo%></td>
                 <td><%= df.format(j)%></td>
+                
                 <% } else {%>
+                
                 <% j = (saldo*taxa)/100; %>
                 <td><%= df.format(saldo)%></td>
                 <td><%= df.format(j)%></td>
+                
                 <% } %>
                 <td><%= df.format(a)%></td>
                 <th><%= df.format(a+j)%></th>
-                <% saldo = saldo-a; %>
+                <% saldo -= a; %>
 
             </tr>
             <% } %>

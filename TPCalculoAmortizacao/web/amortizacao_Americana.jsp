@@ -6,13 +6,31 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<% 
+    
+        int parcelas = 0;
+        double emprestimo = 0;
+        double juros = 0;
+        
+        boolean noArguments = false;
+
+    try{
+        parcelas = Integer.parseInt(request.getParameter("parcelas"));
+        juros = Double.parseDouble(request.getParameter("juros"));
+        emprestimo = Double.parseDouble(request.getParameter("emprestimo"));
+    }
+    catch(Exception ex){
+       noArguments = true;
+    }
+    
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
 
           <table border="1">
 
@@ -27,9 +45,7 @@
 
         
         <%
-            int parcelas = 10;
-            double emprestimo = 50000;
-            double juros = 3;
+            
             double totalJuros = 0;
 
                 int mes = 0;
