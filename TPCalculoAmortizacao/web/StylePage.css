@@ -5,6 +5,18 @@
   text-align: center;
   
 }
+
+.navClass{
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.navClass:hover{
+  border-bottom:solid 1px;
+  text-decoration: none;
+  color: white;
+}
 form{
   width: 20%;
   margin: auto;
@@ -22,6 +34,16 @@ form{
   
 }
 
+::placeholder{
+  color: white;
+}
+::-moz-placeholder{
+  color: white;
+}
+
+::-webkit-input-placeholder{
+  color: white;
+}
 .table-div{
   width: 50%;
   margin: auto;

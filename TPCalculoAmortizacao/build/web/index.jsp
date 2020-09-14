@@ -14,10 +14,21 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jsp" %>
-        <div class="container">
-            <h1 class="alinhar">Cálculo de amortizacao</h1>
-        <h3>Trabalho desenvolvido pelos alunos Daniel, Eduardo e Raphael, para calculos de amortizacao constante ou americano com exibicao da tabela de price.</h3>
-        </div>
+
+
+
+
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Trabalho de Amortização - POO</h1>
+  <p class="lead">Trabalho desenvolvido pelos alunos Daniel, Eduardo, Andre e Raphael, <br>para calculos de amortizacao constante ou americano com exibicao da tabela de price.</p>
+</div>
+
+
+
+
+
+       
 
         
         

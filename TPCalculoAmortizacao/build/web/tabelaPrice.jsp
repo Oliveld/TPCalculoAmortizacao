@@ -44,11 +44,11 @@
         <div class="container">
          <form>
             
-            <input type="number" class="texto" placeholder="Valor do emprestimo:" name="valorEmprestimo"/>
+            <input type="text"  class="texto" placeholder="Valor do emprestimo:" name="valorEmprestimo"/>
             <br>
-            <input type="number" class="texto" placeholder="Taxa de juros ao ano:" name="taxa"/>
+            <input type="text"  class="texto" placeholder="Taxa de juros ao ano:" name="taxa"/>
             <br>
-            <input type="number" class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
+            <input type="text"  class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
             <br>
             <input type="submit" class="Submit" name="Gerar"/>
         </form>
@@ -133,7 +133,6 @@
             </tr>
         </table>
        </div>
-
     </body>
 </html>
 
