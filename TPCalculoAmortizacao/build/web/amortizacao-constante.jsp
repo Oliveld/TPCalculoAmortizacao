@@ -31,11 +31,14 @@
         <title>Calculo de amortizacao constante</title>
     </head>
     <body>
+
         
         <%@include file="WEB-INF/jspf/menu.jsp" %>
         
         <!-- Titulo -->
         <div class="titulo"> 
+
+
         <h1>Java Server Pages</h1>
         <h2>Amortizacao Constante</h2>
         </div>
@@ -59,18 +62,18 @@
                 <th>Parcela</th>
             </tr>
             <% if (request.getParameter("nparcelas") == null) {%>
-            <tr><td colspan="2">Sem parametro</td></tr>
+            
             <% } else if (requestException != null) {%>
             <tr><td colspan="2">Parametro invalido</td></tr>
             <% } %>
             <% if (request.getParameter("taxa") == null) {%>
-            <tr><td colspan="2">Sem parametro</td></tr>
+            
             <% } else if (requestException != null) {%>
             <tr><td colspan="2">Parametro invalido</td></tr>
             <% } %>
             
             <% if (request.getParameter("valorEmprestimo") == null) {%>
-            <tr><td colspan="2">Sem parametro</td></tr>
+            
             <% } else if (requestException != null) {%>
             <tr><td colspan="2">Parametro invalido</td></tr>
             <% } %>
@@ -80,6 +83,8 @@
              taxa = (taxa/12);
              Double a = (valorEmprestimo/nparcelas); 
              Double j = (valorEmprestimo*taxa)/100; 
+             Double jurosTotal = 0.0;
+             Double parcelasTotal = 0.0;
             DecimalFormat df = new DecimalFormat("#0.00");
             df.format(taxa); %>
             
@@ -99,11 +104,22 @@
                 <% } %>
                 <td><%= df.format(a)%></td>
                 <th><%= df.format(a+j)%></th>
-                <% saldo -= a; %>
+                <% saldo -= a; 
+                   jurosTotal = jurosTotal+j;
+                   parcelasTotal = parcelasTotal+a+j;
+                %>
+
 
 
             </tr>
             <% } %>
+            <tr>
+            <th>  Total  </th>
+            <th><%= df.format(saldo) %></th>
+            <th><%= df.format(jurosTotal) %></th>
+            <th><%= df.format(a*nparcelas) %></th>
+            <th><%= df.format(parcelasTotal) %></th>
+            </tr>
         </table>
         </div>
     </body>
