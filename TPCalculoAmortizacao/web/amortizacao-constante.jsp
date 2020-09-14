@@ -45,7 +45,9 @@
             
             <input type="text" class="texto" placeholder="Taxa de juros ao ano:" name="taxa"/>
             
+
             <input type="text" class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
+
             <input type="submit" class="Submit" name="Gerar"/>
         </form>
         <Br/>

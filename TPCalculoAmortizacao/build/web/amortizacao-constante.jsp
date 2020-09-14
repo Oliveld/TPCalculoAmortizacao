@@ -31,11 +31,14 @@
         <title>Calculo de amortizacao constante</title>
     </head>
     <body>
+
         
         <%@include file="WEB-INF/jspf/menu.jsp" %>
         
         <!-- Titulo -->
         <div class="titulo"> 
+
+
         <h1>Java Server Pages</h1>
         <h2>Amortizacao Constante</h2>
         </div>
@@ -45,7 +48,9 @@
             
             <input type="text" class="texto" placeholder="Taxa de juros ao ano:" name="taxa"/>
             
+
             <input type="text" class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
+
             <input type="submit" class="Submit" name="Gerar"/>
         </form>
         <Br/>
@@ -105,6 +110,7 @@
                    jurosTotal = jurosTotal+j;
                    parcelasTotal = parcelasTotal+a+j;
                 %>
+
 
 
             </tr>
