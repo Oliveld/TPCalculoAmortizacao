@@ -44,11 +44,13 @@
         </div>
         <form>
             
-            <input type="number" class="texto" placeholder="Valor do emprestimo:" name="valorEmprestimo"/>
+            <input type="text" class="texto" placeholder="Valor do emprestimo:" name="valorEmprestimo"/>
             
-            <input type="number" class="texto" placeholder="Taxa de juros ao ano:" name="taxa"/>
+            <input type="text" class="texto" placeholder="Taxa de juros ao ano:" name="taxa"/>
             
-            <input type="number" class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
+
+            <input type="text" class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
+
             <input type="submit" class="Submit" name="Gerar"/>
         </form>
         <Br/>

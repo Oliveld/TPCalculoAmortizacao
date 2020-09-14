@@ -12,28 +12,24 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="navbar-brand" href="index.jsp">Amortizados</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.jsp">Home<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="tabelaPrice.jsp">Tabela Price</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="amortizacao-constante.jsp">Amortização Constante</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="amortizacao_Americana.jsp">Amortização Americana</a>
-      </li>
-    
-    </ul>
+
+
+            <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Black Lives Matter!</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" href="index.jsp">Home</a>
+    <a class="p-2 text-dark" href="tabelaPrice.jsp">Tabela Price</a>
+    <a class="p-2 text-dark" href="amortizacao-constante.jsp">Amortização Constante</a>
+    <a class="p-2 text-dark" href="amortizacao_Americana.jsp">Amortização Americana</a>
+  </nav>
+
+   <a href="">
+     <img width="50px" height="50px" src="img/blacklivesmatter.jpg" />
+    </a>
+</div>
+   
+
   </div>
 </nav>
     </body>
