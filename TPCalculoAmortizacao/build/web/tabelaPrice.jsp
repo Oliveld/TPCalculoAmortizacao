@@ -50,7 +50,7 @@
             <br>
             <input type="number" class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
             <br>
-            <input type="submit" class="Submit" value="Gerar"/>
+            <input type="submit" class="Submit" name="Gerar"/>
         </form>
             
         </div>
@@ -133,6 +133,7 @@
             </tr>
         </table>
        </div>
+
     </body>
 </html>
 
