@@ -42,7 +42,6 @@
             <input type="text" class="texto" placeholder="Valor do emprestimo:" name="emprestimo"/>
             
             <input type="text" class="texto" placeholder="Taxa de juros ao ano:" name="juros"/>
-            
 
             <input type="text" class="texto" placeholder="Numero de parcelas:" name="parcelas"/>
 
