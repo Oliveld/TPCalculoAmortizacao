@@ -27,9 +27,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+         <link rel="stylesheet" href="StylePage.css">
     </head>
     <body>
         
+        <%@include file="WEB-INF/jspf/menu.jsp" %>
+         
+        <div class="titulo"> 
+        <h1>Java Server Pages</h1>
+        <h2>Amortizacao Americana</h2>
+        </div>
          <form>
             
             <input type="number" class="texto" placeholder="Valor do emprestimo:" name="emprestimo"/>
@@ -37,9 +44,12 @@
             <input type="number" class="texto" placeholder="Taxa de juros ao ano:" name="juros"/>
             
             <input type="number" class="texto" placeholder="Numero de parcelas:" name="parcelas"/>
-            <input type="submit" class="Submit" name="Gerar"/>
+            <input type="submit" class="Submit" name="Gerar"/> 
         </form>
-          <table border="1">
+        <Br/>
+        
+        <div class="table-div">
+            <table class="table">
 
             <tr>
                 <th>Mes</th>
@@ -129,5 +139,7 @@
       
         
         </table>
+            
+     </div>
     </body>
 </html>

@@ -9,12 +9,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" href="StylePage.css">
         <title>Calculo de amortizacao</title>
     </head>
     <body>
-        <h1>Calculo de amortizacao</h1>
+        <%@include file="WEB-INF/jspf/menu.jsp" %>
+        <div class="container">
+            <h1 class="alinhar">Cálculo de amortizacao</h1>
         <h3>Trabalho desenvolvido pelos alunos Daniel, Eduardo e Raphael, para calculos de amortizacao constante ou americano com exibicao da tabela de price.</h3>
-        <h3><a href="amortizacao-constante.jsp">Amortizacao Constante</a></h3>
+        </div>
+
+        
         
     </body>
 </html>

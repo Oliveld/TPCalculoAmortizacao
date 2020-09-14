@@ -31,18 +31,31 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+         <link rel="stylesheet" href="StylePage.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
+        <%@include file="WEB-INF/jspf/menu.jsp" %>
+        <div class="titulo"> 
+        <h1>Java Server Pages</h1>
+        <h2>Tabela Price</h2>
+        </div>
+        
+        <div class="container">
          <form>
             
             <input type="number" class="texto" placeholder="Valor do emprestimo:" name="valorEmprestimo"/>
-            
+            <br>
             <input type="number" class="texto" placeholder="Taxa de juros ao ano:" name="taxa"/>
-            
+            <br>
             <input type="number" class="texto" placeholder="Numero de parcelas:" name="nparcelas"/>
+            <br>
             <input type="submit" class="Submit" name="Gerar"/>
         </form>
+            
+        </div>
+        
+        <br>
 
         <% 
            
@@ -58,7 +71,8 @@
             float totalAmortizacao = 0;
             float totalParcelas = 0;
         %>
-            <table border="1">
+        <div class="table-div">
+            <table class="table">
 
 
             <tr>
@@ -70,11 +84,11 @@
             </tr>
             
             <tr>
-                <th>0</th>
-                <th><% out.print(saldoDevedor); %></th>
-                <th>-</th>
-                <th>-</th>
-                <th>-</th>
+                <td>0</td>
+                <td><% out.print(saldoDevedor); %></td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
             </tr>
         
         <%
@@ -111,13 +125,14 @@
             %>
             <tr>
 
-            <th> <% out.print("Total"); %> </td>
-            <th> <% out.print(totalSaldoDevedor); %> </td>
-            <th> <% out.print(totalJuros); %> </td>
-            <th> <% out.print(totalAmortizacao); %> </td>
-            <th> <% out.print(totalParcelas); %> </td>
+            <td> <% out.print("Total"); %> </td>
+            <td> <% out.print(totalSaldoDevedor); %> </td>
+            <td> <% out.print(totalJuros); %> </td>
+            <td> <% out.print(totalAmortizacao); %> </td>
+            <td> <% out.print(totalParcelas); %> </td>
             </tr>
         </table>
+       </div>
     </body>
 </html>
 
