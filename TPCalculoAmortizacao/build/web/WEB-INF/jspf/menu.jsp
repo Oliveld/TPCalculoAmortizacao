@@ -13,7 +13,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <a class="white" href="index.jsp">Amortizados</a>
+  <a class="navbar-brand" href="index.jsp">Amortizados</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -21,22 +21,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="white" href="index.jsp">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.jsp">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="white" href="tabelaPrice.jsp">Tabela Price</a>
+        <a class="nav-link" href="tabelaPrice.jsp">Tabela Price</a>
       </li>
       <li class="nav-item">
-        <a class="white" href="amortizacao-constante.jsp">Amortização Constante</a>
+        <a class="nav-link" href="amortizacao-constante.jsp">Amortização Constante</a>
       </li>
       <li class="nav-item">
-        <a class="white" href="amortizacao_Americana.jsp">Amortização Americana</a>
+        <a class="nav-link" href="amortizacao_Americana.jsp">Amortização Americana</a>
       </li>
     
     </ul>
-    <a href="https://blacklivesmatter.com/" >
-    <img width="50px" height="50px" src="imgs\51JZdFnrKTL._AC_SS350_.jpg" />
-    </a>
   </div>
 </nav>
     </body>
